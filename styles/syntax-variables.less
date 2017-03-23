@@ -7,7 +7,7 @@
 @syntax-text-color: @very-light-gray;
 @syntax-cursor-color: white;
 @syntax-selection-color: lighten(#353535, 4%);
-@syntax-background-color: #151515;
+@syntax-background-color: #161616;
 
 // Guide colors
 @syntax-wrap-guide-color: @dark-gray;
@@ -34,6 +34,7 @@
 // Semimono General
 .syntax--entity.syntax--name.syntax--tag { border-bottom: 1px solid #444; text-decoration: none !important; }
 .bracket-matcher .region {  border-bottom: 1px solid #ccc; }
+.gutter { margin-right: 6px; }
 
 // Semimono CSS
 .syntax--css { color: @dark-purple;}
@@ -53,19 +54,11 @@
 .syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class { color: @semi-light-grey; }
 .syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--pseudo-class { color: @light-purple; }
 .syntax--css .syntax--entity.syntax--name.syntax--tag { color: @light-purple; }
+.syntax--css .syntax--keyword.syntax--control.syntax--at-rule.syntax--media, .syntax--css .syntax--support.syntax--type.syntax--property-name.syntax--media { color: @light-purple; }
 .syntax--css .syntax--constant.syntax--character.syntax--escape.syntax--codepoint, .syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id, .syntax--css .syntax--support.syntax--function, .syntax--css .syntax--string { color: @light-purple; }
+.syntax--css .syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin.syntax--bracket.syntax--round, .syntax--css .syntax--punctuation.syntax--definition.syntax--parameters.syntax--end.syntax--bracket.syntax--round { color: @medium-grey; }
 .syntax--css .syntax--keyword.syntax--operator { color: @dark-purple; }
 .syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--pseudo-element, .syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--attribute, .syntax--css .syntax--entity.syntax--other.syntax--attribute-name { color: @light-green; }
-.syntax--css .syntax--keyword.syntax--control.syntax--at-rule.syntax--import.syntax--less, .syntax--css .syntax--punctuation.syntax--definition.syntax--keyword.syntax--less, .syntax--css .syntax--keyword.syntax--control.syntax--at-rule.syntax--import, .syntax--keyword.syntax--control.syntax--at-rule.syntax--import span, .syntax--html .syntax--import .syntax--punctuation.syntax--definition.syntax--keyword { color: @medium-orange; }
-.syntax--css .syntax--keyword.syntax--control.syntax--at-rule.syntax--media, span.syntax--punctuation.syntax--definition.syntax--keyword.syntax--css { color: @medium-orange; }
-.syntax--html .syntax--import .syntax--css .syntax--punctuation.syntax--definition.syntax--string.syntax--begin, .syntax--html .syntax--import .syntax--css .syntax--punctuation.syntax--definition.syntax--string.syntax--end { color: lighten(@semi-light-orange, 5%); }
-.syntax--css .syntax--meta.syntax--at-rule.syntax--import span { color: lighten(@semi-light-orange, 5%); }
-.syntax--css .syntax--support.syntax--constant.syntax--media { color: lighten(@semi-light-orange, 5%); }
-.syntax--css .syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin.syntax--bracket.syntax--round, .syntax--css .syntax--punctuation.syntax--definition.syntax--parameters.syntax--end.syntax--bracket.syntax--round { color: @dark-orange; }
-.syntax--css .syntax--support.syntax--type.syntax--property-name.syntax--media { color: @medium-orange; }
-.syntax--css .syntax--at-rule .syntax--numeric, .syntax--css .syntax--at-rule .syntax--constant .syntax--px, .syntax--css .syntax--at-rule .syntax--constant .syntax--em, .syntax--css .syntax--keyword.syntax--operator.syntax--logical.syntax--and.syntax--media { color: lighten(@semi-light-orange, 5%); }
-.syntax--css .syntax--punctuation.syntax--section.syntax--media.syntax--begin.syntax--bracket.syntax--curly, .syntax--css .syntax--punctuation.syntax--section.syntax--media.syntax--end.syntax--bracket.syntax--curly { color: @dark-orange; }
-.syntax--css .syntax--at-rule .syntax--punctuation.syntax--separator.syntax--key-value { color: @medium-orange; }
 
 // Semimono JS
 .syntax--js .syntax--entity.syntax--name.syntax--function, .syntax--js .syntax--variable.syntax--other.syntax--object { color: @medium-blue; }
