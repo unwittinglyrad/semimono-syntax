@@ -1,0 +1,100 @@
+@import "colors";
+
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// General colors
+@syntax-text-color: @very-light-gray;
+@syntax-cursor-color: white;
+@syntax-selection-color: lighten(#353535, 4%);
+@syntax-background-color: #151515;
+
+// Guide colors
+@syntax-wrap-guide-color: @dark-gray;
+@syntax-indent-guide-color: @gray;
+@syntax-invisible-character-color: @gray;
+
+// For find and replace markers
+@syntax-result-marker-color: @light-gray;
+@syntax-result-marker-color-selected: white;
+
+// Gutter colors
+@syntax-gutter-text-color: @very-light-gray;
+@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
+@syntax-gutter-background-color: #101010;
+@syntax-gutter-background-color-selected: #353535;
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: @blue;
+@syntax-color-added: @green;
+@syntax-color-modified: @orange;
+@syntax-color-removed: @red;
+
+
+// Semimono General
+.syntax--entity.syntax--name.syntax--tag { border-bottom: 1px solid #444; text-decoration: none !important; }
+.bracket-matcher .region {  border-bottom: 1px solid #ccc; }
+
+// Semimono CSS
+.syntax--css { color: @dark-purple;}
+.syntax--css .syntax--punctuation.syntax--section.syntax--property-list.syntax--begin.syntax--bracket.syntax--curly,
+.syntax--css .syntax--punctuation.syntax--section.syntax--property-list.syntax--end.syntax--bracket.syntax--curly,
+.syntax--css .syntax--punctuation.syntax--definition.syntax--tag.syntax--html { color: @medium-grey; }
+.syntax--css .syntax--punctuation.syntax--terminator.syntax--rule { color: @medium-grey; }
+.syntax--css .syntax--property-value { color: @light-purple; }
+.syntax--css .syntax--constant.syntax--other.syntax--color { color: @light-purple; }
+.syntax--css .syntax--constant { color: @light-purple; }
+.syntax--css .syntax--constant.syntax--numeric { color: @light-purple; }
+.syntax--css .syntax--keyword.syntax--other.syntax--unit, .syntax--css .syntax--keyword { color: @light-purple; }
+.syntax--css .syntax--comment, .syntax--css .syntax--punctuation.syntax--definition.syntax--comment { color: @light-yellow; }
+.syntax--css .syntax--support.syntax--function.syntax--any-method { color: @light-green; }
+.syntax--css .syntax--variable.syntax--other.syntax--less { color: @medium-grey; }
+.syntax--css .syntax--variable.syntax--other.syntax--less:nth-last-child(1) { color: @light-purple; }
+.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class { color: @semi-light-grey; }
+.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--pseudo-class { color: @light-purple; }
+.syntax--css .syntax--entity.syntax--name.syntax--tag { color: @light-purple; }
+.syntax--css .syntax--constant.syntax--character.syntax--escape.syntax--codepoint, .syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id, .syntax--css .syntax--support.syntax--function, .syntax--css .syntax--string { color: @light-purple; }
+.syntax--css .syntax--keyword.syntax--operator { color: @dark-purple; }
+.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--pseudo-element, .syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--attribute, .syntax--css .syntax--entity.syntax--other.syntax--attribute-name { color: @light-green; }
+.syntax--css .syntax--keyword.syntax--control.syntax--at-rule.syntax--import.syntax--less, .syntax--css .syntax--punctuation.syntax--definition.syntax--keyword.syntax--less, .syntax--css .syntax--keyword.syntax--control.syntax--at-rule.syntax--import, .syntax--keyword.syntax--control.syntax--at-rule.syntax--import span, .syntax--html .syntax--import .syntax--punctuation.syntax--definition.syntax--keyword { color: @medium-orange; }
+.syntax--css .syntax--keyword.syntax--control.syntax--at-rule.syntax--media, span.syntax--punctuation.syntax--definition.syntax--keyword.syntax--css { color: @medium-orange; }
+.syntax--html .syntax--import .syntax--css .syntax--punctuation.syntax--definition.syntax--string.syntax--begin, .syntax--html .syntax--import .syntax--css .syntax--punctuation.syntax--definition.syntax--string.syntax--end { color: lighten(@semi-light-orange, 5%); }
+.syntax--css .syntax--meta.syntax--at-rule.syntax--import span { color: lighten(@semi-light-orange, 5%); }
+.syntax--css .syntax--support.syntax--constant.syntax--media { color: lighten(@semi-light-orange, 5%); }
+.syntax--css .syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin.syntax--bracket.syntax--round, .syntax--css .syntax--punctuation.syntax--definition.syntax--parameters.syntax--end.syntax--bracket.syntax--round { color: @dark-orange; }
+.syntax--css .syntax--support.syntax--type.syntax--property-name.syntax--media { color: @medium-orange; }
+.syntax--css .syntax--at-rule .syntax--numeric, .syntax--css .syntax--at-rule .syntax--constant .syntax--px, .syntax--css .syntax--at-rule .syntax--constant .syntax--em, .syntax--css .syntax--keyword.syntax--operator.syntax--logical.syntax--and.syntax--media { color: lighten(@semi-light-orange, 5%); }
+.syntax--css .syntax--punctuation.syntax--section.syntax--media.syntax--begin.syntax--bracket.syntax--curly, .syntax--css .syntax--punctuation.syntax--section.syntax--media.syntax--end.syntax--bracket.syntax--curly { color: @dark-orange; }
+.syntax--css .syntax--at-rule .syntax--punctuation.syntax--separator.syntax--key-value { color: @medium-orange; }
+
+// Semimono JS
+.syntax--js .syntax--entity.syntax--name.syntax--function, .syntax--js .syntax--variable.syntax--other.syntax--object { color: @medium-blue; }
+.syntax--js .syntax--storage.syntax--type.syntax--function, .syntax--js .syntax--keyword.syntax--control { color: @light-blue; }
+.syntax--js .syntax--constant.syntax--numeric.syntax--decimal { color: @light-blue; }
+.syntax--js .syntax--meta.syntax--arguments { color: @medium-grey; }
+.syntax--js .syntax--constant.syntax--language.syntax--boolean, .syntax--js .syntax--variable.syntax--language, .syntax--js .syntax--constant.syntax--language.syntax--null { color: @light-blue; }
+.syntax--js .syntax--keyword.syntax--operator.syntax--assignment { color: #999999; }
+.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement { color: #999999; }
+.syntax--js .syntax--meta.syntax--delimiter.syntax--object.syntax--comma { color: @medium-blue; }
+.syntax--js .syntax--js.syntax--meta.syntax--arguments { color: @semi-light-grey; }
+.syntax--js .syntax--support.syntax--class { color: @medium-blue; }
+.syntax--js .syntax--support.syntax--function { color: @medium-grey; }
+.syntax--js .syntax--variable.syntax--parameter.syntax--function { color: @semi-light-grey; }
+.syntax--js .syntax--storage.syntax--type.syntax--var, .syntax--js .syntax--support.syntax--variable.syntax--property { color: @light-blue; }
+.syntax--js .syntax--support.syntax--variable.syntax--dom, .syntax--js .syntax--string.syntax--quoted.syntax--single { color: @semi-light-grey; }
+.syntax--js .syntax--variable.syntax--other.syntax--property { color: @light-blue; }
+.syntax--js .syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin.syntax--bracket.syntax--round, .syntax--js .syntax--punctuation.syntax--definition.syntax--parameters.syntax--end.syntax--bracket.syntax--round { color: #7c9fc1; }
+
+// Semimono HTML
+.syntax--html .syntax--entity.syntax--name.syntax--tag.syntax--block.syntax--any, .syntax--html .syntax--entity.syntax--other.syntax--attribute-name, .syntax--html .syntax--entity.syntax--name.syntax--tag.syntax--inline.syntax--any, .syntax--html .syntax--entity.syntax--name.syntax--tag.syntax--style { color: @semi-light-grey; }
+.syntax--html .syntax--string.syntax--quoted.syntax--double { color: @light-grey; }
+.syntax--text.syntax--html.syntax--basic { color: @light-grey; }
+.syntax--html .syntax--punctuation.syntax--definition.syntax--tag.syntax--begin, .syntax--html .syntax--punctuation.syntax--definition.syntax--tag.syntax--end { color: @medium-grey; }
+.syntax--html .syntax--punctuation.syntax--definition.syntax--tag { color: @medium-grey; }
+.syntax--html .syntax--entity.syntax--other.syntax--attribute-name.syntax--id { color: @medium-grey; }
+.syntax--html .syntax--punctuation.syntax--definition.syntax--string.syntax--begin, .syntax--html .syntax--punctuation.syntax--definition.syntax--string.syntax--end, .syntax--html .syntax--entity.syntax--name.syntax--tag.syntax--script { color: @medium-grey; }
+.syntax--html .syntax--entity.syntax--name.syntax--tag { color: @medium-grey; }
+
+// Semimono JSON
+.syntax--json .syntax--string.syntax--quoted.syntax--double { color: @light-grey; }
+.syntax--json .syntax--punctuation.syntax--definition.syntax--string.syntax--begin, .syntax--json .syntax--punctuation.syntax--definition.syntax--string.syntax--end { color: @medium-grey; }

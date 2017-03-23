@@ -1,0 +1,15 @@
+{
+  "name": "semimono-syntax",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "description": "Semimono is a monochrome based syntax theme with pastel highlights.",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/atom/semimono-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
