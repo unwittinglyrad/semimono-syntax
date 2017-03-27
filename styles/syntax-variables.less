@@ -34,6 +34,9 @@
 // Semimono General
 .syntax--entity.syntax--name.syntax--tag { border-bottom: 1px solid #444; text-decoration: none !important; }
 .bracket-matcher .region {  border-bottom: 1px solid #ccc; }
+.syntax--invalid.syntax--illegal { background-color: @dark-coral !important; color: @light-coral !important; }
+.editor .highlight.find-result .region { border-bottom: 2px solid @dark-orange; border-top: 0; border-right: 0; border-left: 0; border-radius: 0; }
+.editor .current-result .region { border-bottom: 2px solid @light-orange; border-top: 0; border-right: 0; border-left: 0; border-radius: 0; }
 
 // Semimono CSS
 .syntax--css { color: @dark-purple;}
@@ -70,22 +73,22 @@
 .syntax--js .syntax--constant.syntax--numeric.syntax--decimal { color: @light-blue; }
 .syntax--js .syntax--meta.syntax--arguments { color: @medium-grey; }
 .syntax--js .syntax--constant.syntax--language.syntax--boolean, .syntax--js .syntax--variable.syntax--language, .syntax--js .syntax--constant.syntax--language.syntax--null { color: @light-blue; }
-.syntax--js .syntax--keyword.syntax--operator.syntax--assignment { color: #999999; }
-.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement { color: #999999; }
+.syntax--js .syntax--keyword.syntax--operator.syntax--assignment { color: @medium-grey; }
+.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement { color: @medium-grey; }
 .syntax--js .syntax--meta.syntax--delimiter.syntax--object.syntax--comma { color: @medium-blue; }
 .syntax--js .syntax--js.syntax--meta.syntax--arguments, .syntax--js .syntax--constant.syntax--language { color: @semi-light-grey; }
 .syntax--js .syntax--support.syntax--class, .syntax--js .syntax--string.syntax--quoted.syntax--double { color: @medium-blue; }
 .syntax--js .syntax--support.syntax--function, .syntax--js .syntax--support.syntax--variable { color: @white; }
 .syntax--js .syntax--variable.syntax--parameter.syntax--function, .syntax--js .syntax--constant.syntax--other.syntax--property { color: @semi-light-grey; }
 .syntax--js .syntax--storage.syntax--type.syntax--var, .syntax--js .syntax--support.syntax--variable.syntax--property { color: @light-blue; }
-.syntax--js .syntax--support.syntax--variable.syntax--dom, .syntax--js .syntax--string.syntax--quoted.syntax--single { color: @semi-light-grey; }
+.syntax--js .syntax--support.syntax--variable.syntax--dom, .syntax--js .syntax--string.syntax--quoted.syntax--single { color: @medium-grey; }
 .syntax--js .syntax--variable.syntax--other.syntax--property { color: @light-blue; }
 .syntax--js .syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin.syntax--bracket.syntax--round, .syntax--js .syntax--punctuation.syntax--definition.syntax--parameters.syntax--end.syntax--bracket.syntax--round { color: #7c9fc1; }
 .syntax--js .syntax--constant.syntax--other.syntax--character-class.syntax--range.syntax--regexp, .syntax--js .syntax--constant.syntax--other.syntax--character-class.syntax--set.syntax--regexp { color: @light-blue; }
 .syntax--js .syntax--punctuation.syntax--definition.syntax--character-class.syntax--regexp, .syntax--js .syntax--meta.syntax--group.syntax--regexp, .syntax--js .syntax--constant.syntax--character.syntax--character-class.syntax--regexp { color: @medium-blue; }
 .syntax--js .syntax--string.syntax--regexp { color: @white; }
 .syntax--js .syntax--constant.syntax--character.syntax--escape { color: @light-blue; }
-
+.syntax--js .syntax--punctuation.syntax--definition.syntax--arguments.syntax--begin.syntax--bracket.syntax--round, .syntax--js .syntax--punctuation.syntax--definition.syntax--arguments.syntax--end.syntax--bracket.syntax--round { color: @light-blue; }
 
 // Semimono HTML
 .syntax--html .syntax--entity.syntax--name.syntax--tag.syntax--block.syntax--any, .syntax--html .syntax--entity.syntax--other.syntax--attribute-name, .syntax--html .syntax--entity.syntax--name.syntax--tag.syntax--inline.syntax--any, .syntax--html .syntax--entity.syntax--name.syntax--tag.syntax--style { color: @semi-light-grey; }
